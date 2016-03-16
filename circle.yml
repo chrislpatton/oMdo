@@ -1,4 +1,5 @@
 deployment:
   production:
     branch: staging
+    commands:
       - cap production deploy
