@@ -17,22 +17,35 @@
     "url": "https://github.com/BirdcageSleet/skynet/issues"
   },
   "homepage": "https://github.com/BirdcageSleet/skynet#readme",
-  "jest" : {
-    "scriptPreprocessor":"<rootDir>/node_modules/babel-jest",
-    "testFileExtensions": ["js", "es6"],
-    "moduleFileExtensions": ["js", "es6"],
-    "unmockedModulePathPatterns":[
-      "react", "react-dom", "react-addons-test-utils"
+  "jest": {
+    "scriptPreprocessor": "<rootDir>/node_modules/babel-jest",
+    "testFileExtensions": [
+      "js",
+      "es6"
+    ],
+    "moduleFileExtensions": [
+      "js",
+      "es6"
+    ],
+    "unmockedModulePathPatterns": [
+      "react",
+      "react-dom",
+      "react-addons-test-utils"
     ]
   },
   "dependencies": {
+    "babel-core": "^6.7.2",
+    "babel-loader": "^6.2.4",
+    "babel-preset-react": "^6.5.0",
     "body-parser": "^1.15.0",
     "dotenv": "^2.0.0",
     "express": "^4.13.4",
+    "html-webpack-plugin": "^2.10.0",
     "morgan": "^1.7.0",
     "react": "^0.14.7",
     "react-dom": "^0.14.7",
-    "react-router": "^2.0.1"
+    "react-router": "^2.0.1",
+    "webpack": "^1.12.14"
   },
   "devDependencies": {
     "babel-core": "^6.7.2",
@@ -51,5 +64,8 @@
     "webpack": "^1.12.14",
     "webpack-dev-middleware": "^1.5.1",
     "webpack-hot-middleware": "^2.10.0"
+  },
+  "optionalDependencies": {
+    "forever": "^0.15.1"
   }
 }
