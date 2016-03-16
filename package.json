@@ -64,5 +64,8 @@
     "webpack": "^1.12.14",
     "webpack-dev-middleware": "^1.5.1",
     "webpack-hot-middleware": "^2.10.0"
+  },
+  "optionalDependencies": {
+    "forever": "^0.15.1"
   }
 }

@@ -5,6 +5,9 @@ bower_components/
 build/
 dist/
 
+# forever logs
+server/log
+
 # Environment stuff
 .env
 
