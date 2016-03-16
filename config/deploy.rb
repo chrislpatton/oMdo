@@ -40,7 +40,7 @@ namespace :deploy do
   desc "Stop Forever"
   task :started do
     on roles(:app) do
-      execute "forever stopall" 
+      execute "forever stopall"
     end
   end
 
@@ -54,9 +54,10 @@ namespace :deploy do
   desc 'Restart application'
   task :restart do
     on roles(:app), in: :sequence, wait: 5 do
-      # This assumes you are using upstart to startup your application 
+      # This assumes you are using upstart to startup your application
       # - be sure that your upstart script runs as the 'deploy' user
-      execute "cd #{current_path} && forever start -o /var/www/skynet/server/log/skynet.log ", raise_on_non_zero_exit: false
+      execute "cd #{current_path} && webpack webpack.production.config.js" 
+      execute "forever start -o /var/www/skynet/server/log/skynet.log ", raise_on_non_zero_exit: false
     end
   end
 
