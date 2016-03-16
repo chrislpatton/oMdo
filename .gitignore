@@ -12,7 +12,9 @@ server/pid
 # Environment stuff
 .env
 
+# Floobits related stuff
 .floo
 .flooignore
 
+# Anything AWS related
 .elasticbeanstalk/
