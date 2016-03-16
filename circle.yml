@@ -1,7 +1,3 @@
-dependencies: pre:
-  - npm install --production
-  - webpack webpack.production.config.js
-
 deployment:
   production:
     branch: staging
