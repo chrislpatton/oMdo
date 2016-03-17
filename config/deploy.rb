@@ -2,7 +2,7 @@
 lock '3.4.0'
 
 set :application, 'skynet'
-set :repo_url, 'git@github.com/BirdcageSleet/skynet.git'
+set :repo_url, 'git@github.com:BirdcageSleet/skynet.git'
 
 # Default branch is :master
 # ask :branch, `git rev-parse --abbrev-ref HEAD`.chomp
