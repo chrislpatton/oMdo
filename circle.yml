@@ -1,8 +1,8 @@
-machine:
-  gem:
-    version: 2.2.2
 dependencies:
-  pre:
+  post:
+    - gem install rubygems-update
+    - update_rubygems
+    - gem update --system
     - gem install capistrano
 deployment:
   production:
