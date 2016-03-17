@@ -1,3 +1,6 @@
+machine:
+  gem:
+    version: 2.0^
 dependencies:
   pre:
     - gem install capistrano
