@@ -14,6 +14,6 @@ var hotConfig = webpackHotMiddleware(compiler, {
 });
 
 module.exports = {
-  devConfig: devConfig
+  devConfig: devConfig,
   hotConfig: hotConfig
 };
