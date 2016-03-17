@@ -8,5 +8,5 @@ deployment:
   production:
     branch: master
     commands:
-      - ssh -A ec2-user@ec2-54-213-147-55.us-west-2.compute.amazonaws.com 'git ls-remote git@github.com:birdcagesleet/skynet'
+      - ssh -A ec2-user@ec2-54-213-147-55.us-west-2.compute.amazonaws.com 'git ls-remote git@github.com'
       - cap production deploy
