@@ -8,6 +8,6 @@ deployment:
   production:
     branch: master
     commands:
-      - ssh ec2-user@ec2-54-213-147-55.us-west-2.compute.amazonaws.com 'echo $SSH_AUTH_SOCK && logout'
+      - ssh ec2-user@ec2-54-213-147-55.us-west-2.compute.amazonaws.com 'echo $SSH_AUTH_SOCK && exit'
       - ssh -A ec2-user@ec2-54-213-147-55.us-west-2.compute.amazonaws.com 'git ls-remote git@github.com'
       - cap production deploy
