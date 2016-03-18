@@ -37,5 +37,5 @@ namespace :deploy do
     end
   end
 
-  before :restart, 'deploy:npm_install'
+  after :published, 'deploy:npm_install'
 end
