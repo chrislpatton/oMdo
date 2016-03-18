@@ -14,17 +14,10 @@ namespace :deploy do
     end
   end
 
-  desc "Install node modules non-globally"
+  desc "Install node modules and build with webpack"
   task :npm_install do
     on roles(:app) do
-      execute "cd #{current_path} && npm install --production"
-    end
-  end
-  
-  desc "Build /dist with webpack"
-  task :webpack_build do
-    on roles(:app) do
-      execute "cd #{current_path} && webpack"
+      execute "cd #{current_path} && npm install --production; && webpack"
     end
   end
 
@@ -37,5 +30,6 @@ namespace :deploy do
     end
   end
 
-  after :published, 'deploy:npm_install', 'deploy:webpack_build', 'deploy:restart'
+  after :published, 'deploy:npm_install'
+  before :finished, 'deploy:restart'
 end
