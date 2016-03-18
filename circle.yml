@@ -1,6 +1,9 @@
 machine:
   ruby:
     version: 2.1.5
+test:
+  post:
+    - webpack
 deployment:
   production:
     branch: master
