@@ -17,7 +17,7 @@ namespace :deploy do
   desc "Install node modules and build with webpack"
   task :npm_install do
     on roles(:app) do
-      execute "cd #{current_path} && npm install --production; && webpack"
+      execute "cd #{current_path} && npm install --production; webpack"
     end
   end
 
