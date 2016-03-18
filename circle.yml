@@ -2,7 +2,7 @@ machine:
   ruby:
     version: 2.1.5
 test:
-  post:
+  pre:
     - webpack
 deployment:
   production:
