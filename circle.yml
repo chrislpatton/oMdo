@@ -1,6 +1,9 @@
 machine:
   ruby:
     version: 2.1.5
+dependencies:
+  override:
+    - npm install --production
 test:
   pre:
     - webpack
