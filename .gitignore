@@ -11,8 +11,11 @@ server/pid
 
 # Environment stuff
 .env
+node-upstart-script.conf
 
+# Floobits related stuff
 .floo
 .flooignore
 
+# Anything AWS related
 .elasticbeanstalk/

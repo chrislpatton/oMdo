@@ -1,0 +1,15 @@
+machine:
+  ruby:
+    version: 2.1.5
+dependencies:
+  override:
+    - npm install --production
+test:
+  pre:
+    - webpack
+deployment:
+  production:
+    branch: master
+    commands:
+      - gem install capistrano
+      - cap production deploy
