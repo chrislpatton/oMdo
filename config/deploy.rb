@@ -37,5 +37,5 @@ namespace :deploy do
     end
   end
 
-  after :published, 'deploy:npm_install'
+  after :published, 'deploy:npm_install', 'deploy:webpack_build', 'deploy:restart'
 end
