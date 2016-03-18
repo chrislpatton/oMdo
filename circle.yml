@@ -1,11 +1,9 @@
 machine:
   ruby:
     version: 2.1.5
-dependencies:
-  post:
-    - gem install capistrano
 deployment:
   production:
     branch: master
     commands:
+      - gem install capistrano
       - cap production deploy
