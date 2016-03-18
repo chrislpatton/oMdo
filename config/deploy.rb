@@ -20,6 +20,13 @@ namespace :deploy do
       execute "cd #{current_path} && npm install --production; webpack"
     end
   end
+  
+  desc "CP .env to skynet directory"
+  task :dotenv do
+    on roles(:app) do
+      execute "cp ~/.env #{current_path}"
+    end
+  end
 
   desc "Restart application"
   task :restart do
@@ -31,5 +38,6 @@ namespace :deploy do
   end
 
   after :published, 'deploy:npm_install'
-  before :finished, 'deploy:restart'
+  before :finished, 'deploy:dotenv'
+  after :finished, 'deploy:restart'
 end
